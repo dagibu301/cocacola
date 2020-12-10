@@ -48,3 +48,35 @@ header {
         }
     }
 }
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .textBox {
+        position: relative;
+        max-width: 600px;
+        margin-right: 20px;
+        > * {
+            color: #fff;
+        }
+        h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            line-height: 1.4em;
+            font-weight: 700;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #e51e2a;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+    }
+}
