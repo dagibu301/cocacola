@@ -1,8 +1,11 @@
 <section>
   <div class="circle"></div>
   <header>
-    <a href="#"><img src="../assets/images/logo.png" alt="logo"></a>
-    <ul class="navigation">
+    <a href="#"><img src="../assets/images/logo.png" alt="logo" /></a>
+    <div class='toggle' [class.active]="toggle" (click)="toggleMenu()">
+
+    </div>
+    <ul class="navigation" [class.active]="toggle">
       <li><a href="#">Home</a></li>
       <li><a href="#">Menu</a></li>
       <li><a href="#">What's New</a></li>
@@ -12,13 +15,36 @@
   <div class="content">
     <div class="textBox">
       <h2>Taste the Feeling</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae odio culpa aliquam autem at, expedita eum provident? Numquam, possimus? Sint porro ab quisquam amet doloremque ut non, nam vitae eveniet.</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae odio
+        culpa aliquam autem at, expedita eum provident? Numquam, possimus? Sint
+        porro ab quisquam amet doloremque ut non, nam vitae eveniet.
+      </p>
       <a href="#">Learn More</a>
     </div>
+
+    <div class="imgBox">
+      <swiper class="swiper-container" [config]="config">
+
+          <div *ngFor="let slide of slides" class="swiper-slide">
+              <img [src]="slide" alt="image" class="slide" />
+          </div>
+
+      </swiper>
+    </div>
+
   </div>
   <ul class="sci">
-    <li><a href="#"><img src="../assets/images/facebook.png" alt="facebook"></a></li>
-    <li><a href="#"><img src="../assets/images/instagram.png" alt="instagram"></a></li>
-    <li><a href="#"><img src="../assets/images/twitter.png" alt="twitter"></a></li>
+    <li>
+      <a href="#"><img src="../assets/images/facebook.png" alt="facebook" /></a>
+    </li>
+    <li>
+      <a href="#"
+        ><img src="../assets/images/instagram.png" alt="instagram"
+      /></a>
+    </li>
+    <li>
+      <a href="#"><img src="../assets/images/twitter.png" alt="twitter" /></a>
+    </li>
   </ul>
 </section>
