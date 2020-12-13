@@ -8,7 +8,7 @@ Coca Cola Landing Page with swiper
 
 Go to: [cocacola-dgb.app/](https://cocacola-dgb.netlify.app/)
 
-![alt text](https://github.com/dagibu301/advice/blob/master/src/assets/cocacola.png?raw=true)
+![alt text](https://github.com/dagibu301/cocacola/blob/master/src/assets/cocacola.png?raw=true)
 
 ## :rocket: Technologies used
 This project was developed using this technologies:
