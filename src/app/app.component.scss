@@ -1,11 +1,11 @@
 @import "../styles.scss";
 
 section {
+  @include flex(space-between, center);
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  @include flex(space-between, center);
   background: $primary-color;
 
   .circle {
@@ -20,19 +20,19 @@ section {
 }
 
 header {
+  @include flex(space-between, center);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 40px 100px;
-  @include flex(space-between, center);
   .logo {
     position: relative;
     max-width: 150px;
   }
   .navigation {
-    position: relative;
     @include flex;
+    position: relative;
     li {
       list-style: none;
       a {
@@ -47,9 +47,9 @@ header {
 }
 
 .content {
+  @include flex(space-between, center);
   position: relative;
   width: 100%;
-  @include flex(space-between, center);
   .textBox {
     position: relative;
     max-width: 600px;
@@ -77,20 +77,19 @@ header {
 }
 
 .sci {
+  @include flex(center, center);
   position: absolute;
-  bottom: 0;
   bottom: 40px;
   left: 100px;
-  @include flex(center, center);
   li {
     list-style: none;
     a {
+      @include flex(center, center);
       display: inline-block;
       margin-left: 15px;
       background: $black;
       width: 50px;
       height: 50px;
-      @include flex(center, center);
       border-radius: 50%;
       transition: 0.2s ease-in-out;
       img {
@@ -116,105 +115,100 @@ header {
 }
 
 .swiper-slide {
+  @include flex(center, flex-end);
   background-position: center;
   background-size: cover;
   width: 180px;
   height: 500px;
-  @include flex(center, flex-end);  
 }
 
 .content {
-    .imgBox {
-        width: 50vw;
-        @include flex(flex-end);
-        img {
-            max-width: 150px;
-        }
+  .imgBox {
+    @include flex(flex-end);
+    width: 50vw;
+    img {
+      max-width: 150px;
     }
+  }
 }
 
 /*********************************************************/
 /***************** Responsive  ***************************/
 /*********************************************************/
 
-
-@media (max-width: 1300px) {
-    .content {
-        .imgBox {
-            width: 55vw;
-        }
-    }
+@media (max-width: 1440px) {
+  .content .imgBox {
+    width: 55vw;
+  }
 }
 
-@media (max-width: 991px) {
-    header {
-        padding: 40px;
-        .navigation {
-            display: none;
-            li {
-                a {
-                    margin: 10px 0;
-                    font-size: 1.5em;
-                    font-weight: 300;
-                }
-            }
+@media (max-width: 1080px) {
+  header {
+    padding: 40px;
+    .navigation {
+      display: none;
+      li {
+        a {
+          margin: 10px 0;
+          font-size: 1.5em;
+          font-weight: 300;
         }
-        .navigation.active {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: $secondary-color;
-            @include flex(center, center);
-            flex-direction: column;
-            z-index: 10;
-        }
+      }
     }
-
-    section {
-        padding: 150px 40px;
+    .navigation.active {
+      @include flex(center, center);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $secondary-color;
+      flex-direction: column;
+      z-index: 2;
     }
+  }
 
-    .sci {
-        left: 40px;
+  section {
+    padding: 150px 40px;
+  }
+
+  .sci {
+    left: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    .textBox {
+      max-width: 100%;
     }
-
-    .content {
-        flex-direction: column;
-        .textBox {
-            max-width: 100%;
-        }
-        .imgBox {
-            width: 90vw;
-        }
+    .imgBox {
+      width: 90vw;
     }
+  }
 
-    .swiper-slide {
-        height: 300px;
+  .swiper-slide {
+    height: 300px;
+  }
+
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(../assets/images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 2;
+
+    &.active {
+      position: fixed;
+      right: 40px;
+      background: url(../assets/images/close.png);
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 3;
     }
-
-    .toggle {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        background: url(../assets/images/menu.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-        z-index: 10000;
-    }
-
-    .toggle.active {
-        position: fixed;
-        right: 40px;
-        background: url(../assets/images/close.png);
-        background-size: 25px;
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-        z-index: 10000;
-    }
-
+  }
 }
