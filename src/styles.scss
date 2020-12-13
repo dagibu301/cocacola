@@ -13,12 +13,12 @@ $black: #222;
   font-family: "Poppins", sans-serif;
 }
 
-@mixin flex($justify-content:"", $align-items:"") {
+@mixin flex($justify-content:false, $align-items:false) {
   display: flex;
-  @if $justify-content != "" {
+  @if $justify-content {
     justify-content: $justify-content;
   }
-  @if $align-items != "" {
+  @if $align-items {
     align-items: $align-items;
   }
 }
