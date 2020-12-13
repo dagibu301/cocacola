@@ -23,8 +23,8 @@
       <a href="#">Learn More</a>
     </div>
 
-    <div class="imgBox">
-      <swiper class="swiper-container" [config]="config">
+    <div class="imgBox" (window:resize)="onResize($event)" >
+      <swiper class="swiper-container" [config]="config" >
 
           <div *ngFor="let slide of slides" class="swiper-slide">
               <img [src]="slide" alt="image" class="slide" />

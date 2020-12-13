@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  SwiperComponent,
-  SwiperDirective,
   SwiperConfigInterface,
-  SwiperScrollbarInterface,
-  SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
 
 @Component({
@@ -29,7 +25,7 @@ export class AppComponent implements OnInit {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 3,
+    slidesPerView: window.screen.width < 630 ? 2 : 3,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -44,6 +40,15 @@ export class AppComponent implements OnInit {
 
   toggleMenu() {
     this.toggle = !this.toggle;
+  }
+
+  onResize(event) {
+    if (event.target.screen.width < 630) {
+      this.config.slidesPerView = 2;
+    } else {
+      this.config.slidesPerView = 3;
+    }
+    console.log(this.config.slidesPerView);
   }
 
 
