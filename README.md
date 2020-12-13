@@ -1,27 +1,26 @@
-# Cocacola
+# Coca Cola :rocket:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+## :computer: Description
 
-## Development server
+Coca Cola Landing Page with swiper 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## :star: Live Preview :star:
 
-## Code scaffolding
+Go to: [cocacola-dgb.app/](https://cocacola-dgb.netlify.app/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt text](https://github.com/dagibu301/advice/blob/master/src/assets/cocacola.png?raw=true)
 
-## Build
+## :rocket: Technologies used
+This project was developed using this technologies:
+- [Angular](https://angular.io/)
+- [Ngx Siper](https://www.npmjs.com/package/ngx-swiper-wrapper)
+- [SASS](https://sass-lang.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## :memo: License
 
-## Running unit tests
+This project is under the license of MIT. See here the archive [LICENSE](LICENSE.md) para mais detalhes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Done with :purple_heart: by David Giraldo :wave:

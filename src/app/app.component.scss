@@ -32,7 +32,7 @@ header {
   }
   .navigation {
     position: relative;
-    display: flex;
+    @include flex;
     li {
       list-style: none;
       a {
@@ -126,8 +126,7 @@ header {
 .content {
     .imgBox {
         width: 50vw;
-        display: flex;
-        justify-content: flex-end;
+        @include flex(flex-end);
         img {
             max-width: 150px;
         }
