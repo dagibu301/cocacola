@@ -13,7 +13,7 @@ Go to: [cocacola-dgb.app/](https://cocacola-dgb.netlify.app/)
 ## :rocket: Technologies used
 This project was developed using this technologies:
 - [Angular](https://angular.io/)
-- [Ngx Siper](https://www.npmjs.com/package/ngx-swiper-wrapper)
+- [Ngx Swiper](https://www.npmjs.com/package/ngx-swiper-wrapper)
 - [SASS](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
