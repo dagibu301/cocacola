@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   SwiperConfigInterface,
 } from 'ngx-swiper-wrapper';
@@ -8,8 +8,7 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  public index: number;
+export class AppComponent {
   public toggle = false;
 
   public slides = [
@@ -48,14 +47,5 @@ export class AppComponent implements OnInit {
     } else {
       this.config.slidesPerView = 3;
     }
-    console.log(this.config.slidesPerView);
   }
-
-
-
-  ngOnInit(): void {
-    this.index = 0;
-
-  }
-
 }
